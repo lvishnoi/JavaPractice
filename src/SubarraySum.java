@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// https://practice.geeksforgeeks.org/problems/subarray-with-given-sum/0
+
 public class SubarraySum {
 
 	public static void main(String[] args) {
@@ -45,6 +47,11 @@ public class SubarraySum {
 			// testCasesNo--;
 		}
 		for (int k = 0; k < testCasesNo; k++) {
+			if (result[k][0] == 0 & result[k][1] == 0) {
+				result[k][0] = -1;
+				result[k][1] = -1;
+			}
+
 			System.out.println(result[k][0] + " " + result[k][1]);
 		}
 		sc.close();
